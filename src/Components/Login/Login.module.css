@@ -1,0 +1,34 @@
+.decorationLink {
+    text-decoration: none;
+    color: #ec872c;
+}
+
+.btnMain {
+    background-color: var(--main-color) !important;
+    color: white !important;
+}
+
+.bgMain {
+    background: rgb(255, 137, 0);
+    background: radial-gradient(circle, rgba(255, 137, 0, 1) 0%, rgba(233, 148, 148, 1) 100%);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+.myFont {
+  font-family: 'Rubik Mono One', sans-serif;
+}
+
+.logo{
+    width: 10%;
+    height: 100%;
+}
+
+img{
+    width: 100%;
+}
+
+
+  
+  
