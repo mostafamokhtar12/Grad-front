@@ -1,0 +1,58 @@
+.bar {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 80%;
+  height: 52px;
+  padding: 0 30px;
+  border: 1.5px solid #ffffff;
+  border-radius: 40px;
+  background-color: transparent;
+  color: #ffffff;
+  font-family: "Courier New", monospace;
+  z-index: 2000;
+  transition: 0.55s ease;
+  -webkit-transition: 0.55s ease;
+  -moz-transition: 0.55s ease;
+  -ms-transition: 0.55s ease;
+  -o-transition: 0.55s ease;
+}
+
+.bar:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  text-decoration: wavy;
+}
+
+.bar a {
+  display: flex;
+  padding-left: 85px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+  transition: transform 0.2s ease, 0.3s ease;
+  -webkit-transition: transform 0.2s ease, 0.3s ease;
+  -moz-transition: transform 0.2s ease, 0.3s ease;
+  -ms-transition: transform 0.2s ease, 0.3s ease;
+  -o-transition: transform 0.2s ease, 0.3s ease;
+}
+
+.logo :hover {
+  transform: scale(1.14);
+  opacity: 0.8;
+  -webkit-transform: scale(1.14);
+  -moz-transform: scale(1.14);
+  -ms-transform: scale(1.14);
+  -o-transform: scale(1.14);
+}

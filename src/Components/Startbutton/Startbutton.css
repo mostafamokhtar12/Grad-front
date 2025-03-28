@@ -1,0 +1,28 @@
+.startButton {
+  display: flex;
+  width: 180px;
+  padding: 12px 65px;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  position: absolute;
+  z-index: 2;
+  border: 2px solid white;
+  border-radius: 15px;
+  font-size: 27px;
+  cursor: pointer;
+  justify-content: flex-end;
+  margin: 1120px 0px 0 0px;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.startButton:hover {
+  background-color: rgba(255, 255, 255, 0.28);
+}

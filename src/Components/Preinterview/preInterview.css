@@ -1,0 +1,91 @@
+/* Dropdown container */
+.dropdown-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  padding-bottom: 10px;
+}
+
+.role-dropdown {
+  position: relative;
+  margin: 35px 0;
+  z-index: 1000;
+  width: 270px;
+}
+
+.dropdown-toggle {
+  padding: 15px 25px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 1.3rem;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  -webkit-transition: background 0.2s ease;
+  -moz-transition: background 0.2s ease;
+  -ms-transition: background 0.2s ease;
+  -o-transition: background 0.2s ease;
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 97%;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.dropdown-options button {
+  width: 100%;
+  padding: 15px 25px;
+  background: transparent;
+  border: none;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.15rem;
+  transition: background 0.15s;
+  -webkit-transition: background 0.15s;
+  -moz-transition: background 0.15s;
+  -ms-transition: background 0.15s;
+  -o-transition: background 0.15s;
+}
+
+.dropdown-options button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.dropdown-options button:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-toggle:hover {
+  background: rgba(255, 255, 255, 0);
+}
+.Choose {
+  display: grid;
+  font-size: 80px;
+  color: #ffffff;
+  z-index: 4;
+  position: absolute;
+  margin-bottom: 300px;
+  padding-left: 75px;
+  letter-spacing: 5px;
+}
