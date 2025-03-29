@@ -8,18 +8,19 @@ import Interview from "./Components/Interview/Interview";
 import Profile from "./Components/Profile/Profile";
 import Home from "./Components/Homepage/Home";
 import PreInterview from "./Components/Preinterview/Preinterview";
+import InterviewTest from "./Components/InterviewTest/InterviewTest";
 export default function App() {
   let routes = createBrowserRouter([
     {
       path: "",
       element: <Layout />,
       children: [
-        { path: "login", element: <Login /> },
-        { path: "interview/:role", element: <Interview /> },
+        { index: true, element: <Login /> },
+        { path: "interview/:role", element: <InterviewTest /> },
         { path: "Profile", element: <Profile /> },
         { path: "home", element: <Home /> },
         { path: "PreInterview", element: <PreInterview /> },
-        { index: true, element: <Register /> },
+        { path: "signup", element: <Register /> },
         { path: "*", element: <Notfound /> },
       ],
     },
@@ -27,7 +28,7 @@ export default function App() {
 
   return (
     <>
-      <RouterProvider router={routes}></RouterProvider>
+      <RouterProvider router={routes} />
     </>
   );
 }

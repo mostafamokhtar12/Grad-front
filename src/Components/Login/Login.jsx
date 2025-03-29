@@ -8,14 +8,18 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import myStyle from "./Login.module.css";
 
+axios.defaults.withCredentials = true;
+
 export default function Login() {
   let [loading, setLoading] = useState(false);
   const nav = useNavigate();
 
   async function Loginapi(values) {
     setLoading(true);
+
+
     let req = await axios
-      .post("https://761h6v0q-3000.uks1.devtunnels.ms/auth/login", values)
+      .post("http://localhost:8080/auth/login", values)
       .catch((error) => {
         console.log(error);
 
@@ -115,23 +119,23 @@ export default function Login() {
               </Link>
             </p>
 
-            <div class="d-flex align-items-center my-3">
-              <hr class="flex-grow-1 me-2"></hr>
-              <span class="fw-bold fs-4">Or</span>
-              <hr class="flex-grow-1 ms-2"></hr>
+            <div className="d-flex align-items-center my-3">
+              <hr className="flex-grow-1 me-2"></hr>
+              <span className="fw-bold fs-4">Or</span>
+              <hr className="flex-grow-1 ms-2"></hr>
             </div>
 
             <div className=" container d-flex justify-content-center flex-wrap">
               <button className="btn mx-2 w-25 border-black">
-                <i class="fa-brands fa-facebook mx-2"></i>
+                <i className="fa-brands fa-facebook mx-2"></i>
                 Login with Facebook
               </button>
               <button className="btn w-25 border-black">
-                <i class="fa-brands fa-square-x-twitter mx-2"></i>
+                <i className="fa-brands fa-square-x-twitter mx-2"></i>
                 Login with X
               </button>
               <button className="btn w-50 my-2 border-black">
-                <i class="fa-brands fa-google mx-2"></i>
+                <i className="fa-brands fa-google mx-2"></i>
                 Login with google
               </button>
             </div>
