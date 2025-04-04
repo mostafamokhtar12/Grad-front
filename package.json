@@ -18,6 +18,7 @@
     "bootstrap": "^5.3.3",
     "formik": "^2.4.6",
     "jquery": "^3.7.1",
+    "json-server": "^1.0.0-beta.3",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.9",
     "react-dom": "^19.0.0",
@@ -28,6 +29,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "server" :"json-server --watch interviewQuestions.json --port 3001",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
