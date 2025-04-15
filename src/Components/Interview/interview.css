@@ -1,3 +1,4 @@
+/* Existing styles (maintained) */
 .interview-page {
   position: fixed;
   overflow-y: auto;
@@ -33,6 +34,7 @@
   -moz-border-radius: 40px;
   -ms-border-radius: 40px;
   -o-border-radius: 40px;
+  flex-direction: column;
 }
 
 .Home-logo-second {
@@ -60,11 +62,144 @@
   z-index: 16;
   background-color: rgb(255, 255, 255);
   justify-content: center;
+  align-items: center;
+  bottom: 0;
+  border-bottom-left-radius: 34px;
+  border-bottom-right-radius: 34px;
 }
 
 .Mic-logo {
-  position: absolute;
-  margin-top: 24px;
-  height: 57px;
+  margin-left: 1.5px;
+  position: relative;
+  height: 56px;
   color: #ec872c;
+}
+
+.chat-container {
+  flex: 1;
+  width: 100%;
+  padding: 30px 40px;
+  overflow-y: auto;
+  margin-bottom: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
+  align-items: flex-start;
+}
+
+.message {
+  max-width: 72%;
+  width: fit-content;
+  padding: 18px 20px;
+  border-radius: 26px;
+  line-height: 1.6;
+  position: relative;
+  animation: fadeIn 0.3s ease-out;
+  font-size: 18px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 26px;
+  -moz-border-radius: 26px;
+  -ms-border-radius: 26px;
+  -o-border-radius: 26px;
+  -webkit-animation: fadeIn 0.3s ease-out;
+}
+
+.bot-message {
+  align-self: flex-start;
+  background-color: #ffffff;
+  color: #333333;
+  border-bottom-left-radius: 6px;
+  border: 1px solid #f0e6d2;
+}
+
+.user-message {
+  align-self: flex-end;
+  background-color: #ec872c;
+  color: white;
+  border-bottom-right-radius: 5px;
+}
+
+.mic-button {
+  width: 85px;
+  height: 85px;
+  border-radius: 100%;
+  background: white;
+  border: 2.7px solid #f0e6d2;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+.mic-button:hover {
+  transform: scale(1.06);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transform: scale(1.06);
+  -moz-transform: scale(1.06);
+  -ms-transform: scale(1.06);
+  -o-transform: scale(1.06);
+}
+
+.mic-button.recording {
+  background: #ff6b6b;
+  border-color: #ff5252;
+}
+
+.mic-button.recording .Mic-logo {
+  color: white;
+}
+
+.recording-indicator {
+  position: absolute;
+  bottom: 30px;
+  color: #ff5252;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chat-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+  background: rgba(255, 242, 217, 0.5);
+  border-radius: 10px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background: #ec872c;
+  border-radius: 10px;
+}
+
+@media (max-width: 1000px) {
+  .interview-container {
+    width: 95%;
+  }
+
+  .message {
+    max-width: 80%;
+    font-size: 16px;
+  }
 }

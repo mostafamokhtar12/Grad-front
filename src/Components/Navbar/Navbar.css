@@ -14,7 +14,7 @@
   background-color: transparent;
   color: #ffffff;
   font-family: "Courier New", monospace;
-  z-index: 2000;
+  z-index: 4000;
   transition: 0.55s ease;
   -webkit-transition: 0.55s ease;
   -moz-transition: 0.55s ease;

@@ -9,7 +9,7 @@ export default function Startbutton({ selectedRole }) {
       alert("Please select a role first!");
       return;
     }
-    navigate(`/interview/${selectedRole}`);
+    navigate(`/Interview/${selectedRole}`);
   };
 
   return (

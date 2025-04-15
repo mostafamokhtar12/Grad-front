@@ -1,34 +1,37 @@
 .decorationLink {
-    text-decoration: none;
-    color: #ec872c;
+  text-decoration: none;
+  color: #ec872c;
 }
 
 .btnMain {
-    background-color: var(--main-color) !important;
-    color: white !important;
+  background-color: var(--main-color) !important;
+  color: white !important;
 }
 
 .bgMain {
-    background: rgb(255, 137, 0);
-    background: radial-gradient(circle, rgba(255, 137, 0, 1) 0%, rgba(233, 148, 148, 1) 100%);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    30deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(231, 210, 131, 1) 0%,
+    rgba(244, 158, 36, 1) 10%,
+    rgb(241, 123, 20) 49%,
+    rgba(244, 164, 36, 1) 69%,
+    rgba(242, 155, 38, 1) 100%
+  );
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
 
 .myFont {
-  font-family: 'Rubik Mono One', sans-serif;
+  font-family: "Rubik Mono One", sans-serif;
 }
 
-.logo{
-    width: 10%;
-    height: 100%;
+.logo {
+  width: 10%;
+  height: 100%;
 }
 
-img{
-    width: 100%;
+img {
+  width: 100%;
 }
-
-
-  
-  
