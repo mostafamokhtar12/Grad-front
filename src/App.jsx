@@ -7,8 +7,10 @@ import Notfound from "./Components/Notfound/Notfound";
 import Profile from "./Components/Profile/Profile";
 import Home from "./Components/Homepage/Home";
 import PreInterview from "./Components/Preinterview/Preinterview";
-import InterviewTest from "./Components/InterviewTest/InterviewTest";
 import Interview from "./Components/Interview/Interview";
+import InterviewHistory from "./Components/Interview/InterviewHistory";
+import InterviewDetails from "./Components/Interview/InterviewDetails";
+// import Interview from "./Components/Interview/Interview";
 import About from "./Components/About/About";
 export default function App() {
   let routes = createBrowserRouter([
@@ -17,6 +19,8 @@ export default function App() {
       element: <Layout />,
       children: [
         { index: true, element: <Login /> },
+        { path: "interview/history", element: <InterviewHistory /> },
+        { path: "interview/history/:interviewId", element: <InterviewDetails /> },
         { path: "interview/:role", element: <Interview /> },
         { path: "Profile", element: <Profile /> },
         { path: "home", element: <Home /> },

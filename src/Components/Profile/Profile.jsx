@@ -7,36 +7,48 @@ import InputProfile from "./InputProfile";
 import "./Profile.css";
 
 export default function Profile() {
-  const [userData, setUserData] = useState({
-    username: "Joao Lyrics🔥",
-    email: "JoaoFelix14@gmail.com",
-    firstName: "Joao",
-    lastName: "Felix",
-  });
+  const [userData, setUserData] = useState({});
+  const [isLoading ,setIsLoading] = useState(true);
+  useEffect(function (){
+    async function FetchUserData()
+    {
+      try{
+        const res = await fetch("http://localhost:8080/profile");
+        const data = await res.json();
 
-  const [profileImage, setProfileImage] = useState(null);
-  const [isEditing, setIsEditing] = useState(false); // Toggle edit mode
-  const fileInputRef = useRef(null);
-
-  useEffect(() => {
-    const savedImage = localStorage.getItem("userProfileImage");
-    if (savedImage) {
-      setProfileImage(savedImage);
+        setUserData(data);
+      }catch(err)
+      {
+        console.error("error occured: ",err);
+      }
+      setIsLoading(false);
     }
-  }, []);
+  },[])
 
-  const handleImageUpload = (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
 
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      const imageData = event.target.result;
-      setProfileImage(imageData);
-      localStorage.setItem("userProfileImage", imageData);
-    };
-    reader.readAsDataURL(file);
-  };
+  // const [profileImage, setProfileImage] = useState(null);
+  const [isEditing, setIsEditing] = useState(false); // Toggle edit mode
+  // const fileInputRef = useRef(null);
+
+  // useEffect(() => {
+  //   const savedImage = localStorage.getItem("userProfileImage");
+  //   if (savedImage) {
+  //     setProfileImage(savedImage);
+  //   }
+  // }, []);
+
+  // const handleImageUpload = (e) => {
+  //   const file = e.target.files[0];
+  //   if (!file) return;
+
+  //   const reader = new FileReader();
+  //   reader.onload = (event) => {
+  //     const imageData = event.target.result;
+  //     setProfileImage(imageData);
+  //     localStorage.setItem("userProfileImage", imageData);
+  //   };
+  //   reader.readAsDataURL(file);
+  // };
 
   const handleChange = (field) => (e) => {
     setUserData({ ...userData, [field]: e.target.value });
@@ -45,14 +57,7 @@ export default function Profile() {
   return (
     <div className="body">
       <div className="inputs">
-        <InputProfile
-          className="username"
-          label="username"
-          value={userData.username}
-          isEditable={isEditing}
-          onChange={handleChange("username")}
-        />
-
+        
         <InputProfile
           className="firstName"
           label="First Name"
@@ -93,7 +98,7 @@ export default function Profile() {
       <div className="user-sidebar">
         <FontAwesomeIcon icon={faUser} className="user-icon" />
 
-        <div
+        {/* <div
           className="profile-upload-circle"
           onClick={() => fileInputRef.current.click()}
         >
@@ -103,20 +108,20 @@ export default function Profile() {
             <div className="default-profile">
               <FontAwesomeIcon icon={faUser} className="profile-silhouette" />
             </div>
-          )}
-          <div className="upload-overlay">
+          )} */}
+          {/* <div className="upload-overlay">
             <FontAwesomeIcon icon={faCamera} />
             <span>Upload Image</span>
           </div>
-        </div>
+        </div> */}
 
-        <input
+        {/* <input
           type="file"
           ref={fileInputRef}
           onChange={handleImageUpload}
           accept="image/*"
           style={{ display: "none" }}
-        />
+        /> */}
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-function speek(question,cb) {
+function speek(question, cb) {
   if ("speechSynthesis" in window) {
     const utterance = new SpeechSynthesisUtterance(question);
     utterance.lang = "en-US"; // Change language if needed
@@ -13,7 +13,7 @@ function speek(question,cb) {
 
 let recognition;
 
-function listen(setAnswer) {
+function listen(setAnswer, setIsListening) {
   if (!("webkitSpeechRecognition" in window || "SpeechRecognition" in window)) {
     alert("Your browser does not support Speech Recognition.");
     return;
@@ -42,10 +42,12 @@ function listen(setAnswer) {
 
   recognition.onend = () => {
     console.log("Recognition ended.");
+    setIsListening(false);
     // setIsListening(false);
   };
 
   recognition.start();
+  setIsListening(true);
 }
 
 export { speek, listen };
