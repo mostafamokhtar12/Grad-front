@@ -3,7 +3,7 @@ import logo from "../../assets/images/Portal logo.png";
 import { Link, NavLink } from "react-router-dom";
 import interviewSora from "../../assets/images/interview_image.png";
 import cvSora from "../../assets/images/cv_image.png";
-import rateSora from "../../assets/images/";
+import rateSora from "../../assets/images/ellipse.png";
 // import cvSora from "../../assets/images/—Pngtree—3d resume business_8631811 1.png";
 // import rateSora from "../../assets/images/Ellipse 3.png";
 

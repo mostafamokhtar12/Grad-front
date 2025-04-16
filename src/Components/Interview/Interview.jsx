@@ -168,10 +168,15 @@ function Interview() {
                 onChange={(e) => setAnswer(e.target.value)}
               />
               <button type="submit">Submit</button>
-              <button type="button" onClick={()=>{
-                setAnswer("");
-                listen(setAnswer,setIsListening)
-              }}>re-answer</button>
+              <button
+                type="button"
+                onClick={() => {
+                  setAnswer("");
+                  listen(setAnswer, setIsListening);
+                }}
+              >
+                re-answer
+              </button>
             </form>
           )}
         </div>

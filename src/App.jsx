@@ -20,7 +20,10 @@ export default function App() {
       children: [
         { index: true, element: <Login /> },
         { path: "interview/history", element: <InterviewHistory /> },
-        { path: "interview/history/:interviewId", element: <InterviewDetails /> },
+        {
+          path: "interview/history/:interviewId",
+          element: <InterviewDetails />,
+        },
         { path: "interview/:role", element: <Interview /> },
         { path: "Profile", element: <Profile /> },
         { path: "home", element: <Home /> },

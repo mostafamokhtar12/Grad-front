@@ -1,16 +1,24 @@
 .whatsapp-wave {
+  margin-left: 20px;
+  margin-bottom: 110px;
   display: flex;
   align-items: center;
-  gap: 6px;
-  height: 30px;
+  position: absolute;
+  gap: 8px;
+  height: 44px;
 }
 
 .whatsapp-wave span {
   display: block;
-  width: 8px;
-  background: orange;
-  border-radius: 50px;
-  animation: waveAnim 1.2s ease-in-out infinite;
+  width: 7.5px;
+  background: #ec872c;
+  border-radius: 56px;
+  animation: waveAnim 1.3s ease-in-out infinite;
+  -webkit-border-radius: 56px;
+  -moz-border-radius: 56px;
+  -ms-border-radius: 56px;
+  -o-border-radius: 56px;
+  -webkit-animation: waveAnim 1.3s ease-in-out infinite;
 }
 
 .whatsapp-wave span:nth-child(1) {

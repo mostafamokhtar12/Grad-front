@@ -11,7 +11,7 @@ export default function About() {
     document.body.classList.remove("loaded");
     setTimeout(() => {
       document.body.classList.add("loaded");
-    }, 500);
+    }, 400);
   }, [location]);
 
   return (
