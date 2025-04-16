@@ -1,30 +1,27 @@
 import React, { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
-import { faCamera, faHome } from "@fortawesome/free-solid-svg-icons";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import InputProfile from "./InputProfile";
 import "./Profile.css";
 
 export default function Profile() {
   const [userData, setUserData] = useState({});
-  const [isLoading ,setIsLoading] = useState(true);
-  useEffect(function (){
-    async function FetchUserData()
-    {
-      try{
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(function () {
+    async function FetchUserData() {
+      try {
         const res = await fetch("http://localhost:8080/profile");
         const data = await res.json();
 
         setUserData(data);
-      }catch(err)
-      {
-        console.error("error occured: ",err);
+      } catch (err) {
+        console.error("error occured: ", err);
       }
       setIsLoading(false);
     }
-  },[])
-
+  }, []);
 
   // const [profileImage, setProfileImage] = useState(null);
   const [isEditing, setIsEditing] = useState(false); // Toggle edit mode
@@ -57,7 +54,6 @@ export default function Profile() {
   return (
     <div className="body">
       <div className="inputs">
-        
         <InputProfile
           className="firstName"
           label="First Name"
@@ -109,7 +105,7 @@ export default function Profile() {
               <FontAwesomeIcon icon={faUser} className="profile-silhouette" />
             </div>
           )} */}
-          {/* <div className="upload-overlay">
+        {/* <div className="upload-overlay">
             <FontAwesomeIcon icon={faCamera} />
             <span>Upload Image</span>
           </div>
