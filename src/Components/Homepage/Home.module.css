@@ -1,69 +1,76 @@
 .logoImage {
-    width: 3%;
+  width: 3%;
 }
 
 .bgColor {
-    background: rgb(2, 0, 36);
-    background: linear-gradient(30deg,
-            rgba(2, 0, 36, 1) 0%,
-            rgba(231, 210, 131, 1) 0%,
-            rgba(244, 158, 36, 1) 10%,
-            rgb(219, 111, 16) 49%,
-            rgba(244, 164, 36, 1) 69%,
-            rgba(242, 155, 38, 1) 100%);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    30deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(231, 210, 131, 1) 0%,
+    rgba(244, 158, 36, 1) 10%,
+    rgb(219, 111, 16) 49%,
+    rgba(244, 164, 36, 1) 69%,
+    rgba(242, 155, 38, 1) 100%
+  );
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
 
 .myFont {
-    font-family: "Rubik Mono One", sans-serif;
+  font-family: "Rubik Mono One", sans-serif;
 }
 
 .imageContainer {
-    overflow: hidden;
-    /* Ensures the zoomed image doesn't overflow */
-
+  overflow: hidden;
+  /* Ensures the zoomed image doesn't overflow */
 }
 
 .imageContainer img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Ensures the image covers the container */
-    transition: transform 0.3s ease;
-    /* Smooth zoom effect */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensures the image covers the container */
+  transition: transform 0.3s ease;
+  /* Smooth zoom effect */
 }
 
 .imageContainer:hover img {
-    transform: scale(1.1);
-    /* Zoom in by 10% on hover */
+  transform: scale(1.1);
+  /* Zoom in by 10% on hover */
 }
 
 /* home.module.css */
 .backGround {
-    background-image: url('../../assets/images/pexels-sora-shimazaki-5668858.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-    /* Ensure text contrast */
-    padding: 2rem;
-    min-height: 100vh;
-    position: relative;
-    /* Needed for absolute positioning of overlay */
-    isolation: isolate;
-    /* Creates new stacking context */
+  background-image: url("../../assets/images/pexels-sora-shimazaki-5668858.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  /* Ensure text contrast */
+  padding: 2rem;
+  min-height: 100vh;
+  position: relative;
+  /* Needed for absolute positioning of overlay */
+  isolation: isolate;
+  /* Creates new stacking context */
 }
 
 /* For text readability, add overlay */
 .backGround::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.3);
-    /* Gray with 50% opacity */
-    backdrop-filter: blur(2px);
-    /* The blur effect */
-    z-index: -1;
-    /* Places behind content */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgb(255, 255, 255);
+  /* Gray with 50% opacity */
+  backdrop-filter: blur(2px);
+  /* The blur effect */
+  z-index: -1;
+  /* Places behind content */
+}
+
+#firstSentence {
+  text-align: left;
+  font-size: 100px;
+  position: absolute;
 }

@@ -4,8 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import interviewSora from "../../assets/images/interview_image.png";
 import cvSora from "../../assets/images/cv_image.png";
 import rateSora from "../../assets/images/ellipse.png";
-import myStyle from './Home.module.css'
-
+import myStyle from "./Home.module.css";
 
 function Home() {
   const [homeData, setHomeData] = useState({});
@@ -29,18 +28,21 @@ function Home() {
   return (
     <>
       <div className={`${myStyle.backGround}`}>
-        <nav className={`navbar ${myStyle.bgColor} navbar-expand-lg w-75 m-auto rounded-3 my-3`}>
+        <nav
+          className={`navbar ${myStyle.bgColor} navbar-expand-lg w-75 m-auto rounded-3 my-3`}
+        >
           <div className="container">
             <img src={logo} className={`${myStyle.logoImage}`} alt="Logo" />
 
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-
                 <li className="nav-item">
                   <NavLink
                     to="/interview/history"
                     className={`nav-link text-white ${myStyle.myFont} fs-5`}
-
                   >
                     History
                   </NavLink>
@@ -96,24 +98,49 @@ function Home() {
           className={`h-25 w-75 d-block m-auto btn ${myStyle.bgColor} mb-3`}
           to={"/preinterview"}
         >
-          <div className={`${myStyle.imageContainer} d-flex justify-content-between`}>
-            <h2 className=" text-white w-75 align-content-center">
+          <div
+            className={`${myStyle.imageContainer} d-flex justify-content-between`}
+          >
+            <h2
+              className=" text-white w-75 align-content-center"
+              style={{
+                textAlign: "left",
+                fontSize: "68px",
+
+                color: "white",
+                width: "70%",
+              }}
+            >
               Elevate your interviewing skills with our AI mock interview.
             </h2>
             <img src={interviewSora} className="w-25" alt="" />
           </div>
         </Link>
 
-        <Link className={`w-75 d-block m-auto btn ${myStyle.bgColor} mb-3`} to={"/cv"}>
-          <div className={`${myStyle.imageContainer} d-flex justify-content-between`}>
+        <Link
+          className={`w-75 d-block m-auto btn ${myStyle.bgColor} mb-3`}
+          to={"/cv"}
+        >
+          <div
+            className={`${myStyle.imageContainer} d-flex justify-content-between`}
+          >
             <img src={cvSora} className="w-25" alt="" />
-            <h2 className=" text-white w-75 align-content-center">
-              Still struggling to create a proper CV? Use our expertly crafted templates to make a lasting impression.
+            <h2
+              style={{
+                textAlign: "left",
+                fontSize: "60px",
+
+                color: "white",
+                width: "70%",
+              }}
+              className=" text-white w-75 align-content-center"
+            >
+              Still struggling to create a proper CV? Use our expertly crafted
+              templates to make a lasting impression.
             </h2>
           </div>
         </Link>
       </div>
-
     </>
   );
 }
